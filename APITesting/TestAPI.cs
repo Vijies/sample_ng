@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
-using FASSNotaryTests;
+
 
 namespace APITesting
 {
@@ -22,8 +22,7 @@ namespace APITesting
         public void BasicHealthCheck()
         {
             //Creating Client connection 
-            RestClient restClient = new RestClient("https://titan-fassnotary-outbound.dev-fams-toh.io/v1/hellotitan");
-           
+          
             //const string baseURL = "endpoint";
             //RestClient restClient = new RestClient();
             //restClient.BaseUrl = new Uri(baseURL);
@@ -39,7 +38,9 @@ namespace APITesting
 
             // Verifiying reponse
             if (!response.Contains("Hello Titan!!"))
-                Assert.Fail("Response Fail");
+                Assert.
+                
+                l("Response Fail");
 
             int StatusCode = (int)restResponse.StatusCode;
             Assert.AreEqual(200, StatusCode, "Status code is "+StatusCode);
